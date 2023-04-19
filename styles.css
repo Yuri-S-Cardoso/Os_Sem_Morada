@@ -1,0 +1,17 @@
+@charset "UTF-8"
+
+body {
+  background-color: rgb(245, 247, 212);
+}
+h1 {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  color: #a60505;
+  text-shadow: 2px 2px 4px rgb(144, 116, 255);
+}
+p {
+  text-align: justify;
+  font-family: '"Audiowide", sans-serif';
+  font-size: 18px;
+  color: black;
+}
