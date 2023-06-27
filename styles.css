@@ -73,7 +73,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 310vh;
+  height: auto;
 }
 .container {
     width: 50rem;
@@ -115,7 +115,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 160vh;
+  height: auto;
 }
 .main-footer {
   display: flex;
