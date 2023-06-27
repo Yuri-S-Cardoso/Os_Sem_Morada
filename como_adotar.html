@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel = "shortcut icon" href="imagens\\sem_morada.ico" type = "image/x-icon">
+    <title>Os Sem-Morada&reg;</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="nav-icon">
+          <i class="fas fa-bars"></i>
+        </div>        
+        <div class="logo">
+          <a href="index.html">
+            <img src="imagens\\sem_morada.ico" width="200" height="200">
+          </a>
+            <h1>
+              Animais para adoção <h0>&#128054</h0>
+            </h1>
+        </div>
+        <div class="menu">
+            <li><a href="como_adotar.html">Como adotar</a></li>
+            <li><a href="sobrenos.html">Sobre nós</a></li>
+        </div>
+      </nav>
+      <div class="hero">
+        <br>
+        <h1>
+          Faça a diferença na vida de um animal. Adote! Descubra o poder transformador da adoção e dê um lar amoroso a um amigo peludo. Junte-se a nós nessa jornada de amor, compaixão e alegria. Adotar é mais do que dar um lar, é mudar uma vida para sempre.
+        </h1>
+      </div>
+
+      <div class="box">
+        <div class="container">
+          <h2>Vamos adotar?</h2>
+          <div class="formulario">
+            <div class="input-group">
+              <label for="">Nome Completo:</label>
+              <input type="text" placeholder="Fulaninho da Silva Santos">
+            </div>
+            <div class="input-group">
+              <label for="">Endereço completo:</label>
+              <input type="text" placeholder="Rua Fulaninho, 999">
+            </div>
+            <div class="input-group">
+              <label for="">Telefone:</label>
+              <input type="tel" placeholder="(00)00000-0000.">
+            </div>
+            <div class="input-group">
+              <label for="">E-mail:</label>
+              <input type="email" placeholder="fulaninhosilva2023@gmail.com">
+            </div>
+            <div class="input-group">
+              <label for="">Qual é o nome do animal que você deseja adotar?</label>
+              <input type="text">
+            </div>
+            <div class="input-group">
+              <label for="">Por que você decidiu adotar um animal de estimação?</label>
+              <input type="text">
+            </div>
+            <div class="input-group">
+              <label for="">Você já teve experiência prévia com animais de estimação? Se sim, por favor, descreva.</label>
+              <input type="text">
+            </div>
+            <div class="input-group">
+              <label for="">Você possui outros animais de estimação atualmente? Se sim, por favor, liste-os (informando a espécie, idade e se estão castrados/vacinados).</label>
+              <input type="text">
+            </div>
+            <div class="input-group">
+              <label for="">Quem são os membros da sua família? Inclua o número de pessoas e a idade de cada uma.</label>
+              <input type="text">
+            </div>
+            <div class="input-group">
+              <label for="">Você possui algum tipo de restrição em relação ao tamanho, raça ou idade do animal que deseja adotar? Se sim, por favor, especifique.</label>
+              <input type="text">
+            </div>
+            <div class="input-group">
+              <label for="">Você tem espaço adequado em sua casa para abrigar um animal de estimação? Descreva o ambiente em que o animal ficará.</label>
+              <input type="text">
+            </div>
+            <div class="input-group">
+              <label for="">Você está ciente dos cuidados necessários para a saúde e bem-estar de um animal de estimação, incluindo alimentação adequada, exercício físico, cuidados veterinários e atenção diária?</label>
+              <input type="text">
+            </div>
+            <div class="input-group">
+              <label for="">Você está disposto a arcar com os custos associados à adoção, incluindo despesas veterinárias, alimentação, brinquedos e acessórios?</label>
+              <input type="text">
+            </div>
+            <div class="input-group">
+              <label for="">Qual é o seu plano em relação ao treinamento e socialização do animal?</label>
+              <input type="text">
+            </div>
+            <div class="input-group">
+              <label for="">Caso ocorra algum imprevisto na adaptação ou no convívio com o animal, você está disposto a buscar orientação e apoio da organização de adoção?</label>
+              <input type="text">
+            </div>
+        </div>
+
+        <div class="rodape">
+          <p>Por favor, forneça quaisquer informações adicionais que você considere relevante para o processo de adoção.</p>
+          <p>Ao preencher e enviar este formulário, você concorda em fornecer informações verdadeiras e precisas. Compreende-se que a organização de adoção se reserva o direito de realizar uma entrevista, visitar sua residência e realizar um processo de triagem para garantir que a adoção seja feita de acordo com as melhores condições para o animal.</p>
+          </div>
+
+
+        <div class="assinatura">
+          <h3>Assine aqui</h3>
+          <canvas id="canvas" width="400" height="200"></canvas>
+          <input type="hidden" id="assinatura" name="assinatura" value="">
+          <button id="btnAssinar">Assinar</button>
+          <button id="btnLimpar">Limpar</button>
+        </div>
+        <div class="relogio">
+          <label for="" class="saida">Data:</label>
+          <input type="text" id="data_hora_input" value="{{ data_hora_atual }}" readonly>
+      </div>
+      </div>
+    </header>
+  </body>
+  
+  <footer class="main-footer">
+    <div class="developer">
+      <a href="https://www.instagram.com/yuridscardoso/" target="_blank" rel="noreferrer noopener">By Yuri Cardoso</a>
+    </div>
+  
+    <div class="powered">
+      <a href="#">Powered by Professora Flávia</a>
+    </div>
+  </footer>
+
+  <script>
+    function atualizarRelogio() {
+        var dataHoraAtual = new Date().toLocaleString();
+        document.getElementById("data_hora_input").value = dataHoraAtual;
+    }
+    atualizarRelogio(); 
+    setInterval(atualizarRelogio, 1000);
+   
+    var canvas = document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+    var isDesenhando = false;
+    var assinaturaData = '';
+
+    canvas.addEventListener('mousedown', function(e) {
+      isDesenhando = true;
+      ctx.beginPath();
+      ctx.moveTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+    });
+
+    document.addEventListener('mousemove', function(e) {
+      if (isDesenhando) {
+        ctx.lineTo(e.clientX - canvas.offsetLeft, e.clientY - canvas.offsetTop);
+        ctx.stroke();
+      }
+    });
+
+    document.addEventListener('mouseup', function() {
+      isDesenhando = false;
+      assinaturaData = canvas.toDataURL();
+      document.getElementById('assinatura').value = assinaturaData;
+    });
+
+    document.getElementById('btnAssinar').addEventListener('click', function() {
+      if (assinaturaData !== '') {
+        // Aqui você pode realizar a lógica para enviar a assinatura para validação, salvar no banco de dados, etc.
+        alert('Assinatura enviada com sucesso!');
+      } else {
+        alert('Por favor, faça uma assinatura antes de enviar.');
+      }
+    });
+
+    document.getElementById('btnLimpar').addEventListener('click', function() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      document.getElementById('assinatura').value = '';
+      assinaturaData = '';
+    });
+      
+  </script>
+</html>
